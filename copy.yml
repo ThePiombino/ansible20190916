@@ -1,0 +1,8 @@
+---
+- name: Copy module
+  hosts: futurama
+
+  tasks:
+          - copy:
+                  src: secondfloor.txt
+                  dest: secondfloor.txt

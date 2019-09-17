@@ -1,0 +1,10 @@
+---
+- name: Decompress
+  hosts: futurama
+  become: yes
+  tasks:
+          - name: unarchive
+            unarchive:
+                    src: ~/tmp/images/cirros-0.4.0-ppc64le-lxc.tar.gz
+                    dest: ~/tmp/
+                    remote_src: yes

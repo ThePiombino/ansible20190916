@@ -1,0 +1,15 @@
+---
+- name: Download OS image to directory
+  hosts: futurama
+
+  tasks:
+          - name: Create file if not already present
+            file:
+                    path: ~/tmp/images
+                    state: directory
+
+          - name: Get URL
+            get_url:
+                    url: https://download.cirros-cloud.net/0.4.0/cirros-0.4.0-ppc64le-lxc.tar.gz
+                    dest: ~/tmp/images
+                  

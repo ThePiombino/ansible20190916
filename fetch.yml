@@ -1,0 +1,11 @@
+---
+- name: Learning about the fetch module
+  hosts: futurama
+
+  tasks:
+
+         - name: Employ the fetch module to grab a file
+           fetch:
+                  src: secondfloor.txt
+                  dest: /tmp/secondfloor.txt.{{ inventory_hostname }}
+                  flat: yes
